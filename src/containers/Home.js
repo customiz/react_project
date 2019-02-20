@@ -1,12 +1,10 @@
-import './App.css';
 import React, { Component } from 'react';
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import ProductItem from "./components/product/ProductItem";
-import Monitor from "./components/monitor/Monitor";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Monitor from "../components/monitor/Monitor";
 import axios from "axios";
 
-class App extends Component {
+class Home extends Component {
   
   constructor(props){
     super(props);
@@ -46,4 +44,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;
