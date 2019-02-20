@@ -18,9 +18,22 @@ class ProductItem extends Component {
             <img className="img-fliud img-thumbnail" src={thumbnail} />
                 <h5 className="mt-2">{productName}</h5>
                 <p className="text-right title">{unitPrice} บาท</p>
+                
+                {this.props.onAddOrder &&
                 <button className="btn btn-block btn-secondary title"  onClick={() => this.props.onAddOrder(this.props.product)}>
                     ซื้อ
                 </button>
+                }
+                {(this.props.onDelProduct) &&
+                <button className="btn  btn-info col-5 title"  >
+                    แก้ไข
+                </button>
+                }
+                {this.props.onDelProduct &&
+                <button className="btn  btn-danger col-5 float-right title"  onClick={() => this.props.onDelProduct(this.props.product)}>
+                    ลบ
+                </button>
+                }
                 <hr />
             </div>
         )
